@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
-    main: ['./src/js/animation.js','./src/index.js',],
+    main: './src/index.js',
+    animation: "./src/js/animation.js"
   },
   output: {
     filename: '[name].bundle.js',
@@ -14,12 +15,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
-      },
-      {
-        test: /\.(scss|sass)$/i,
-        use: ['sass-loader'],
+        test: /\.(css|sass|scss)$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader',
+          'sass-loader',]
       },
       {
         test: /\.(png|svg|jpg|gif|jpe?g)$/,
@@ -39,8 +37,8 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
-        { from: "src/assets/", to: "images/" },
-        { from: "index.html", to: "index.html" },
+        {from: "src/assets/", to: "images/"},
+        {from: "index.html", to: "index.html"},
       ],
     }),
   ],

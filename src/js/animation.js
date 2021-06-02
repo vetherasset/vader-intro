@@ -11,7 +11,7 @@ let v5 = document.getElementById("V-5");
 
 let vflame2 = document.getElementById("vader-flame");
 
-function openDoor(){
+function openDoor() {
   vflame2.classList.add("scale-200");
   v1.classList.add("translate-x-64");
 
@@ -30,7 +30,8 @@ function openDoor(){
 
   document.getElementById("enter-text-event").classList.add("z-50");
 }
-function closeDoor(){
+
+function closeDoor() {
   vflame2.classList.remove("scale-200");
   v1.classList.remove("translate-x-64");
 
@@ -49,19 +50,21 @@ function closeDoor(){
   document.getElementById("enter-text-event").classList.remove("z-50");
 }
 
-test.addEventListener("mouseenter", function( event ) {
+test.addEventListener("mouseenter", function (event) {
   console.log("open door");
   openDoor();
 }, false);
 
-test.addEventListener("mouseleave", function( event ) {
+test.addEventListener("mouseleave", function (event) {
   console.log("close door");
   closeDoor();
 }, false);
 
+document.querySelector("#enter-text-event").addEventListener("click", enterClicked)
+
 
 //SETTINGS CLICK EVENT
-document.addEventListener('click', function(event){
+document.addEventListener('click', function (event) {
   // If the clicked element doesn't have the right selector, bail
   if (!event.target.matches('.swap-settings-btn')) return;
   // Don't follow the link
@@ -70,8 +73,7 @@ document.addEventListener('click', function(event){
   console.log("SETTINGS BTN CLICKED");
 }, false);
 
-function enterClicked(){
-
+function enterClicked() {
   let vaderportal = document.getElementById("vader-portal");
   let vetherportal = document.getElementById("vether-portal");
   let vflame = document.getElementById("vader-flame-2");
@@ -109,7 +111,7 @@ function fadeIn(el, display) {
 };
 
 /* SLIDE UP */
-let slideUp = (target, duration=500) => {
+let slideUp = (target, duration = 500) => {
 
   target.style.transitionProperty = 'height, margin, padding';
   target.style.transitionDuration = duration + 'ms';
@@ -122,7 +124,7 @@ let slideUp = (target, duration=500) => {
   target.style.paddingBottom = 0;
   target.style.marginTop = 0;
   target.style.marginBottom = 0;
-  window.setTimeout( () => {
+  window.setTimeout(() => {
     target.style.display = 'none';
     target.style.removeProperty('height');
     target.style.removeProperty('padding-top');
@@ -136,7 +138,7 @@ let slideUp = (target, duration=500) => {
 }
 
 /* SLIDE DOWN */
-let slideDown = (target, duration=500) => {
+let slideDown = (target, duration = 500) => {
 
   target.style.removeProperty('display');
   let display = window.getComputedStyle(target).display;
@@ -158,7 +160,7 @@ let slideDown = (target, duration=500) => {
   target.style.removeProperty('padding-bottom');
   target.style.removeProperty('margin-top');
   target.style.removeProperty('margin-bottom');
-  window.setTimeout( () => {
+  window.setTimeout(() => {
     target.style.removeProperty('height');
     target.style.removeProperty('overflow');
     target.style.removeProperty('transition-duration');
