@@ -16,8 +16,9 @@ module.exports = {
     rules: [
       {
         test: /\.(css|sass|scss)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader',
-          'sass-loader',]
+        use: [MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader']
       },
       {
         test: /\.(png|svg|jpg|gif|jpe?g)$/,
@@ -30,6 +31,19 @@ module.exports = {
             loader: "file-loader"
           }
         ]
+      },
+
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/'
+            }
+          }
+        ]
       }
     ],
   },
@@ -37,7 +51,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
-        {from: "src/assets/", to: "images/"},
+        {from: "public", to: "./"},
         {from: "index.html", to: "index.html"},
       ],
     }),

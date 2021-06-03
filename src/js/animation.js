@@ -11,41 +11,44 @@ let v5 = document.getElementById("V-5");
 
 let vflame2 = document.getElementById("vader-flame");
 
+const translateX = "translate-x-32"
+const translateY = "translate-y-32"
 function openDoor() {
-  vflame2.classList.add("scale-200");
-  v1.classList.add("translate-x-64");
+
+  vflame2.classList.add("scale-120");
+  v1.classList.add(translateX);
 
 
-  v2.classList.add("translate-x-64");
-  v2.classList.add("translate-y-64");
+  v2.classList.add(translateX);
+  v2.classList.add(translateY);
 
-  v3.classList.add("translate-y-64");
+  v3.classList.add(translateY);
 
-  v4.classList.add("-translate-x-64");
-  v4.classList.add("translate-y-64");
+  v4.classList.add(`-${translateX}`);
+  v4.classList.add(translateY);
 
 
-  v5.classList.add("-translate-x-64");
-  v5.classList.add("-translate-y-64");
+  v5.classList.add(`-${translateX}`);
+  v5.classList.add(`-${translateY}`);
 
   document.getElementById("enter-text-event").classList.add("z-50");
 }
 
 function closeDoor() {
-  vflame2.classList.remove("scale-200");
-  v1.classList.remove("translate-x-64");
+  vflame2.classList.remove("scale-120");
+  v1.classList.remove(translateX);
 
 
-  v2.classList.remove("translate-x-64");
-  v2.classList.remove("translate-y-64");
+  v2.classList.remove(translateX);
+  v2.classList.remove(translateY);
 
-  v3.classList.remove("translate-y-64");
+  v3.classList.remove(translateY);
 
-  v4.classList.remove("-translate-x-64");
-  v4.classList.remove("translate-y-64");
+  v4.classList.remove(`-${translateX}`);
+  v4.classList.remove(translateY);
 
-  v5.classList.remove("-translate-x-64");
-  v5.classList.remove("-translate-y-64");
+  v5.classList.remove(`-${translateX}`);
+  v5.classList.remove(`-${translateY}`);
 
   document.getElementById("enter-text-event").classList.remove("z-50");
 }
