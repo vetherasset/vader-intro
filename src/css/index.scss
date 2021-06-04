@@ -150,9 +150,15 @@ body {
     width: 250px;
 }
 
+.initial-content {
+    height: calc(100vh - 128px);
+}
+
 main {
     display: flex;
     justify-content: center;
+    height: calc(100vh - 128px);
+    overflow-y: hidden;
 }
 
 .vader-container {
