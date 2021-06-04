@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vader - Landing</title>
+  <title>Vader Protocol - Intro</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"
         integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q=="
         crossorigin="anonymous"/>
@@ -12,27 +12,31 @@
           integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
           crossorigin="anonymous"></script>
   <link href="main.css" rel="stylesheet">
+  <link rel="preload" href="fonts/average-sans-v9-latin-regular.woff" as="font" crossorigin="anonymous" />
+  <style>
+    /* average-sans-regular - latin */
+    @font-face {
+        font-family: 'Button';
+        font-style: normal;
+        font-weight: 400;
+        src: local(''),
+            url('fonts/average-sans-v9-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('fonts/average-sans-v9-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+  </style>
 </head>
 
 
 <body class="min-w-full flex flex-col overscroll-contain">
-<!-- HEADER -->
-<div class="min-w-full flex justify-center h-32 p-4 text-white link-white items-center z-50">
-  <a href="https://vether-landing-ga348xdtm-vaderprotocol.vercel.app/">
-    <img class="absolute left-4 top-4" width="100" height="100"
-         src="images/vader_fireAnim5.gif">
-    <img class="absolute left-4 top-6" width="100"
-         height="100"
-         src="images/vaderLogo_V_cracked2.png"></a>
-</div>
 <!-- MAIN PAGE CONTENT -->
 
 <div class="z-30 portal-container min-w-full flex flex-row justify-center items-center">
   <div id="vader-portal"
        class="bg-gray-900 vader-container absolute top-0 left-0 flex flex-col w-1/2 justify-around items-center h-full">
     <img class="z-50 transition select-none w-full sm:w-1/2" src="images/Vader_logo.svg">
-    <a href="" id="to-vader"
-            class="z-50 hover:opacity-50 border rounded shadow px-8 py-4 text-white bg-transparent mx-auto text-2xl">
+    <a href="https://vaderprotocol.io/" id="to-vader"
+      style="font-family: 'Button';"
+      class="z-50 hover:opacity-50 border rounded shadow px-8 py-4 text-white bg-transparent mx-auto text-2xl">
       Learn More
     </a>
   </div>
@@ -44,7 +48,8 @@
     position: relative;
     top: 4px;"
     src="images/Vether_logo.svg">
-    <a href="https://vether-landing-ga348xdtm-vaderprotocol.vercel.app/" id="to-vether" type="submit"
+    <a href="https://vetherasset.io/" id="to-vether" type="submit"
+       style="font-family: 'Button';"
        class="z-70 hover:opacity-50 border border-gray-900 rounded shadow text-gray-900 px-8 py-4 bg-transparent mx-auto text-2xl">
       Learn More
     </a>
@@ -56,7 +61,15 @@
 
 <div
   class="initial-content relative main-content min-w-full flex flex-col justify-between p-10 pb-0 h-full overflow-x-hidden sm:overflow-visible">
-  <main class="m-4 flex flex-col justify-center relative bottom-32 overscroll-contain">
+  <main class="m-4 flex flex-col justify-center bottom-32 overscroll-contain">
+    <div class="min-w-full flex justify-center h-32 p-4 text-white link-white items-center z-50">
+      <a href="#">
+        <img class="absolute left-4 top-4" width="100" height="100"
+             src="images/vader_fireAnim5.gif">
+        <img class="absolute left-4 top-6" width="100"
+             height="100"
+             src="images/vaderLogo_V_cracked2.png"></a>
+    </div>
     <div id="vader-enter-logo" class="justify-center flex flex-row w-auto mx-auto items-center">
       <img id="vader-flame" src="images/vader_fireAnim5.gif" alt="Vader Flame Logo Element"
            class="flex absolute transform transition duration-1000 scale-125 sm:scale-100 -translate-y-4 sm:-translate-y-32  items-center justify-around mx-auto sm:w-3/5">
@@ -78,7 +91,7 @@
 
       <div class="center absolute items-center ">
         <a id="enter-text-event"
-           class="hover:text-opacity-70 relative text-2xl sm:text-2xl md:text-5xl sm:top-32 sm:right-16 text-white font-extrabold select-none cursor-pointer focus:outline-none z-10 text-center">LETS&nbsp;BURN</a>
+           class="hover:text-opacity-70 relative text-2xl sm:text-2xl md:text-5xl sm:top-32 sm:right-16 text-white font-extrabold select-none cursor-pointer focus:outline-none z-10 text-center">LET'S&nbsp;BURN</a>
       </div>
     </div>
   </main>

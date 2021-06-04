@@ -30,6 +30,18 @@ module.exports = {
             loader: "file-loader"
           }
         ]
+      },
+      {
+        test: /\.(woff|woff2)$/,
+        use: [
+          {
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/"
+            },
+            loader: "file-loader"
+          }
+        ]
       }
     ],
   },
@@ -37,6 +49,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [
+        {from: "src/fonts/", to: "fonts/"},
         {from: "src/assets/", to: "images/"},
         {from: "index.html", to: "index.html"},
       ],
