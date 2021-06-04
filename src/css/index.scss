@@ -1,5 +1,5 @@
 body{
-    color: red;
+    overflow: hidden;
 }
 @-webkit-keyframes ticker {
     0% {
@@ -206,4 +206,14 @@ main {
         left: 5px;
         font-size: 1.5rem;
     }
+}
+
+.burn-v{
+    width: 100%;
+    height: 50%;
+    *{
+        --tw-scale-x:1;
+        --tw-scale-y:1
+    }
+
 }
