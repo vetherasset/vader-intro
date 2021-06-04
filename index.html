@@ -1,113 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" class="bg-black">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Vader - Landing</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"
-        integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q=="
-        crossorigin="anonymous"/>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"
-          integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
-          crossorigin="anonymous"></script>
-  <link href="main.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vader - Landing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css"
+          integrity="sha512-RntatPOhEcQEA81gC/esYoCkGkL7AYV7TeTPoU+R9zE44/yWxVvLIBfBSaMu78rhoDd73ZeRHXRJN5+aPEK53Q=="
+          crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.3.1/p5.min.js"
+            integrity="sha512-gQVBYBvfC+uyor5Teonjr9nmY1bN+DlOCezkhzg4ShpC5q81ogvFsr5IV4xXAj6HEtG7M1Pb2JCha97tVFItYQ=="
+            crossorigin="anonymous"></script>
+    <link href="main.css" rel="stylesheet">
 </head>
 
 
 <body class="min-w-full flex flex-col overscroll-contain">
 <!-- HEADER -->
 <div class="min-w-full flex justify-center h-32 p-4 text-white link-white items-center z-50">
-  <a href="https://vether-landing-ga348xdtm-vaderprotocol.vercel.app/">
-    <img class="absolute left-4 top-4" width="100" height="100"
-         src="images/vader_fireAnim5.gif">
-    <img class="absolute left-4 top-6" width="100"
-         height="100"
-         src="images/vaderLogo_V_cracked2.png"></a>
+    <a href="https://vether-landing-ga348xdtm-vaderprotocol.vercel.app/">
+        <img class="absolute left-4 top-4" width="100" height="100"
+             src="images/vader_fireAnim5.gif">
+        <img class="absolute left-4 top-6" width="100"
+             height="100"
+             src="images/vaderLogo_V_cracked2.png"></a>
 
-  <div class="absolute sm:right-32 sm:top-16 right-4 top-6 flex flex-row p-4">
-    <a class="py-2 px-4 sm:p-4 text-white border-white border rounded text-lg font-bold" href="https://vetherasset.app">
-      Go To App</a>
-  </div>
+    <div class="absolute sm:right-32 sm:top-16 right-4 top-6 flex flex-row p-4">
+        <a class="py-2 px-4 sm:p-4 text-white border-white border rounded text-lg font-bold"
+           href="https://vetherasset.app">
+            Go To App</a>
+    </div>
 </div>
 <!-- MAIN PAGE CONTENT -->
 
 <div class="z-30 portal-container min-w-full flex flex-row justify-center items-center">
-  <div id="vader-portal"
-       class="rounded bg-gray-900 vader-container absolute top-0 left-0 flex flex-col w-1/2 justify-around items-center h-full">
-    <img class="z-50 transition select-none w-full sm:w-1/2 " src="images/Vader_logo.svg">
-    <a href="" id="to-vader"
-            class="z-50 hover:opacity-50 border rounded shadow px-8 py-4 text-white bg-transparent mx-auto text-2xl">
-      To Vader
-    </a>
-  </div>
+    <div id="vader-portal"
+         class="rounded bg-gray-900 vader-container absolute top-0 left-0 flex flex-col w-1/2 justify-around items-center h-full">
+        <img class="z-50 transition select-none w-full sm:w-1/2 " src="images/Vader_logo.svg">
+        <a href="" id="to-vader"
+           class="z-50 hover:opacity-50 border rounded shadow px-8 py-4 text-white bg-transparent mx-auto text-2xl">
+            To Vader
+        </a>
+    </div>
 
-  <div id="vether-portal"
-       class="bg-gray-200 vether-container absolute top-0 right-0 flex flex-col w-1/2 justify-around items-center h-full">
-    <img class="z-50 transition select-none w-full sm:w-7/12" src="images/Vether_logo.svg">
-    <a href="https://vether-landing-ga348xdtm-vaderprotocol.vercel.app/" id="to-vether" type="submit"
-       class="z-70 hover:opacity-50 border rounded shadow text-gray-900 px-8 py-4 bg-transparent mx-auto text-2xl">
-      To Vether
-    </a>
-  </div>
-  <div id="vader-flame-2">
-    <img  src="images/vader_fireAnim5.gif" alt="Vader Flame Logo Element"
-         class="transform z-40 -top-8 flex absolute transform translate-y-16 items-center mx-auto sm:w-1/2">
-    <img
-         class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-         src="images/V-Cracked/V-1.png">
-    <img
-         class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-         src="images/V-Cracked/V-2.png">
-    <img
-         class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-         src="images/V-Cracked/V-3.png">
-    <img
-         class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-         src="images/V-Cracked/V-4.png">
-    <img
-         class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-         src="images/V-Cracked/V-5.png">
-  </div>
+    <div id="vether-portal"
+         class="bg-gray-200 vether-container absolute top-0 right-0 flex flex-col w-1/2 justify-around items-center h-full">
+        <img class="z-50 transition select-none w-full sm:w-7/12" src="images/Vether_logo.svg">
+        <a href="https://vether-landing-ga348xdtm-vaderprotocol.vercel.app/" id="to-vether" type="submit"
+           class="z-70 hover:opacity-50 border rounded shadow text-gray-900 px-8 py-4 bg-transparent mx-auto text-2xl">
+            To Vether
+        </a>
+    </div>
+
+    <div id="vader-flame-2" class="justify-center flex flex-row w-auto mx-auto items-center">
+        <img id="vader-flame-child" src="images/vader_fireAnim5.gif" alt="Vader Flame Logo Element"
+             class="flex absolute transform transition duration-1000 sm:scale-100 translate-y-56  items-center justify-around mx-auto sm:w-3/5 hidden  lg:scale-75">
+        <img id="V-1-1"
+             class="z-20 transform absolute transition duration-500 ease-in-out select-none sm:w-1/2  translate-y-72 hidden lg:translate-y-80 md:translate-y-72 lg:scale-75"
+             src="images/V-Cracked/V-1.png">
+        <img id="V-2-2"
+             class="z-20 transform absolute transition duration-500 ease-in-out select-none sm:w-1/2  translate-y-72 lg:translate-y-80 md:translate-y-72 hidden  lg:scale-75"
+             src="images/V-Cracked/V-2.png">
+        <img id="V-3-3"
+             class="z-20 transform absolute transition duration-500 ease-in-out select-none sm:w-1/2 translate-y-72 lg:translate-y-80  md:translate-y-72 hidden  lg:scale-75"
+             src="images/V-Cracked/V-3.png">
+        <img id="V-4-4"
+             class="z-20 transform absolute transition duration-500 ease-in-out select-none sm:w-1/2  translate-y-72 lg:translate-y-80 md:translate-y-72 hidden  lg:scale-75"
+             src="images/V-Cracked/V-4.png">
+        <img id="V-5-5"
+             class="z-20 transform absolute transition duration-500 ease-in-out select-none sm:w-1/2 translate-y-72 lg:translate-y-80 md:translate-y-72 hidden  lg:scale-75"
+             src="images/V-Cracked/V-5.png">
+    </div>
 </div>
 
 
 <div
-  class="initial-content relative main-content min-w-full flex flex-col justify-between p-10 pb-0 h-full overflow-x-hidden sm:overflow-visible">
-  <main class="m-4 flex flex-col justify-center relative bottom-32 overscroll-contain">
-    <div id="vader-enter-logo" class="justify-center flex flex-row w-auto mx-auto items-center">
-      <img id="vader-flame" src="images/vader_fireAnim5.gif" alt="Vader Flame Logo Element"
-           class="flex absolute transform transition duration-1000 scale-125 sm:scale-100 -translate-y-4 sm:-translate-y-32  items-center justify-around mx-auto sm:w-3/5">
-      <img id="V-1"
-           class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-           src="images/V-Cracked/V-1.png">
-      <img id="V-2"
-           class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-           src="images/V-Cracked/V-2.png">
-      <img id="V-3"
-           class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-           src="images/V-Cracked/V-3.png">
-      <img id="V-4"
-           class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-           src="images/V-Cracked/V-4.png">
-      <img id="V-5"
-           class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
-           src="images/V-Cracked/V-5.png">
-
-      <div class="center absolute items-center ">
-        <a id="enter-text-event"
-           class="hover:text-opacity-70 relative text-2xl sm:text-2xl md:text-5xl sm:top-32 sm:right-16 text-white font-extrabold select-none cursor-pointer focus:outline-none z-10 text-center">LETS&nbsp;BURN</a>
-      </div>
-    </div>
-  </main>
+        class="initial-content relative main-content min-w-full flex flex-col justify-between p-10 pb-0 h-full overflow-x-hidden sm:overflow-visible">
+    <main class="m-4 flex flex-col justify-center relative bottom-32 overscroll-contain">
+        <div id="vader-enter-logo" class="justify-center flex flex-row w-auto mx-auto items-center">
+            <img id="vader-flame" src="images/vader_fireAnim5.gif" alt="Vader Flame Logo Element"
+                 class="flex absolute transform transition duration-1000 scale-125 sm:scale-100 -translate-y-4 sm:-translate-y-32  items-center justify-around mx-auto sm:w-3/5">
+            <img id="V-1"
+                 class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
+                 src="images/V-Cracked/V-1.png">
+            <img id="V-2"
+                 class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
+                 src="images/V-Cracked/V-2.png">
+            <img id="V-3"
+                 class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
+                 src="images/V-Cracked/V-3.png">
+            <img id="V-4"
+                 class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
+                 src="images/V-Cracked/V-4.png">
+            <img id="V-5"
+                 class="z-20 transform absolute transition duration-500 ease-in-out select-none scale-150 sm:scale-125 sm:w-1/2"
+                 src="images/V-Cracked/V-5.png">
+            <div class="center absolute items-center ">
+                <a id="enter-text-event"
+                   class="hover:text-opacity-70 relative text-2xl sm:text-2xl md:text-5xl sm:top-32 sm:right-16 text-white font-extrabold select-none cursor-pointer focus:outline-none z-10 text-center">LETS&nbsp;BURN</a>
+            </div>
+        </div>
+    </main>
 </div>
 <!-- VADER PROTOCOL INFO -->
 <!-- FOOTER -->
 <div class="min-w-full items-center justify-center">
 
-  <div class="hidden shadow bg-gray-800 bg-opacity-20 min-w-full justify-center items-center text-center pb-64">
-    <a class="p-4 text-white font-extrabold" href="VADER - Burn.html">Info</a>
-  </div>
+    <div class="hidden shadow bg-gray-800 bg-opacity-20 min-w-full justify-center items-center text-center pb-64">
+        <a class="p-4 text-white font-extrabold" href="VADER - Burn.html">Info</a>
+    </div>
 
 </div>
 <script src="animation.bundle.js"></script>

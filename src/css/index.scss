@@ -5,6 +5,7 @@ body {
   color: red;
   font-family: Body,  sans-serif;
   height: 100vh;
+  overflow: hidden;
 }
 
 @-webkit-keyframes ticker {
@@ -90,6 +91,8 @@ body {
 
 #vader-flame-2 {
   display: none;
+  justify-content: center;
+  width: 100%;
 }
 
 .header-container {

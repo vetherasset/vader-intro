@@ -79,11 +79,11 @@ document.addEventListener('click', function (event) {
 function enterClicked() {
   let vaderportal = document.getElementById("vader-portal");
   let vetherportal = document.getElementById("vether-portal");
-  let vflame = document.getElementById("vader-flame-2");
+  let vflame = document.querySelector("#vader-flame-2");
 
   slideDown(vaderportal, 1000);
   slideDown(vetherportal, 2000);
-  slideDown(vflame, 3000);
+  slideDownAll(vflame, 3000);
   closeDoor();
   document.getElementById("enter-text-event").classList.add("hidden");
 }
@@ -142,34 +142,49 @@ let slideUp = (target, duration = 500) => {
 
 /* SLIDE DOWN */
 let slideDown = (target, duration = 500) => {
+  return new Promise(resolve => {
+    target.style.removeProperty('display');
+    let display = window.getComputedStyle(target).display;
+    if (display === 'none') display = 'flex';
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = 'border-box';
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    setTimeout(() => {
+      target.style.removeProperty('height');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      resolve(true)
+    }, duration);
+  })
 
-  target.style.removeProperty('display');
-  let display = window.getComputedStyle(target).display;
-  if (display === 'none') display = 'flex';
-  target.style.display = display;
-  let height = target.offsetHeight;
-  target.style.overflow = 'hidden';
-  target.style.height = 0;
-  target.style.paddingTop = 0;
-  target.style.paddingBottom = 0;
-  target.style.marginTop = 0;
-  target.style.marginBottom = 0;
-  target.offsetHeight;
-  target.style.boxSizing = 'border-box';
-  target.style.transitionProperty = "height, margin, padding";
-  target.style.transitionDuration = duration + 'ms';
-  target.style.height = height + 'px';
-  target.style.removeProperty('padding-top');
-  target.style.removeProperty('padding-bottom');
-  target.style.removeProperty('margin-top');
-  target.style.removeProperty('margin-bottom');
-  window.setTimeout(() => {
-    target.style.removeProperty('height');
-    target.style.removeProperty('overflow');
-    target.style.removeProperty('transition-duration');
-    target.style.removeProperty('transition-property');
-  }, duration);
 }
+
+
+
+const slideDownAll = (target) =>{
+  const children = target.querySelectorAll("*")
+  slideDown(target).then(()=>{
+    children.forEach(child=>{
+      slideDown(child, 3000)
+    })
+  })
+}
+
 
 /* SLIDE TOGGLE */
 var slideToggle = (target, duration = 500) => {
