@@ -74,18 +74,7 @@ document.addEventListener('click', function (event) {
 }, false);
 
 function enterClicked() {
-  let vaderportal = document.getElementById("vader-portal");
-  let vetherportal = document.getElementById("vether-portal");
-  let vflame = document.getElementById("vader-flame-2");
-  const burnV= document.querySelector(".burn-v")
-
-  slideDown(vaderportal, 1000);
-  slideDown(vetherportal, 2000);
-  slideDown(vflame, 3000);
-  slideDown(burnV, 3000)
-  slideDownAll(burnV, 3000)
   closeDoor();
-  document.getElementById("enter-text-event").classList.add("hidden");
 }
 
 // ** FADE OUT FUNCTION **
